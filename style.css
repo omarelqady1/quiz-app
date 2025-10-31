@@ -1,0 +1,353 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* dark greyish gradient */
+  color: #e0e0e0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Login Box */
+.login-box {
+  background: rgba(20, 40, 35, 0.85); /* deep dark green tone */
+  border: 1px solid rgba(60, 120, 90, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #9be7c4; /* soft mint green accent */
+  letter-spacing: 1px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #a8b3ad;
+}
+
+.input-group input {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: background 0.3s, transform 0.2s, border 0.3s;
+}
+
+.input-group input::placeholder {
+  color: #9ba8a0;
+}
+
+.input-group input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #00bfa6;
+  transform: scale(1.02);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #00bfa6; /* vivid green accent */
+  color: #0f2027;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #00a78f;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+
+
+/* Hide/Show Utility */
+.hidden {
+  display: none;
+}
+
+/* Quiz Container */
+.quiz-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+  padding: 20px;
+}
+
+.quiz-box {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);;
+  border: 1px solid rgba(60, 120, 90, 0.3);
+  border-radius: 12px;
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Question */
+.question-text {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  color: #9be7c4;
+  text-align: center;
+}
+
+/* Answers */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.answer-option:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.answer-option input {
+  margin-right: 12px;
+  accent-color: #00bfa6; /* green radio button */
+}
+
+/* Next / Finish Button */
+.next-btn {
+  width: 100%;
+  padding: 12px;
+  background: #00bfa6;
+  color: #0f2027;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.next-btn:hover {
+  background: #00a78f;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .quiz-box {
+    padding: 30px 20px;
+  }
+  .question-text {
+    font-size: 1.2rem;
+  }
+}
+
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.results-box {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.results-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.results-score {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.results-score-value {
+  font-weight: bold;
+  color: #27ae60; /* soft green */
+}
+
+.results-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn.results-btn {
+  background-color: #e0e0e0; /* neutral gray */
+  color: #222;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn.results-btn:hover {
+  background-color: #d5d5d5;
+}
+
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  /* background-color: #f5f5f5; */
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.6rem;
+  transition: all 0.2s ease;
+}
+
+.answer-option input {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.answer-option span {
+  font-size: 1rem;
+}
+
+/* Highlight correct & wrong answers only when reviewing */
+.review-correct {
+  background-color: #d4edda !important;
+  color: #155724 !important;
+  border: 1px solid #b5e0bb;
+  font-weight: 600;
+}
+
+.review-wrong {
+  background-color: #f8d7da !important;
+  color: #721c24 !important;
+  border: 1px solid #f1b0b7;
+  font-weight: 600;
+}
+
+/* Keep your normal hover untouched */
+/* .answer-option:hover:not(.review-correct):not(.review-wrong) {
+  background-color: #eaeaea;
+} */
+
+/* Scoped, non-conflicting CSS for the thank-you screen */
+.ty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: inherit;
+}
+
+.ty-box {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ty-title {
+  font-size: 1.6rem;
+  margin: 0 0 0.6rem 0;
+  color: #222;
+}
+
+.ty-sub {
+  color: #444;
+  margin: 0 0 1.2rem 0;
+  font-size: 1rem;
+}
+
+/* Buttons area */
+.ty-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Start new quiz button — neutral style to match your app */
+.ty-start-btn {
+  background-color: #5b5b5b; /* dark neutral */
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  min-width: 160px;
+}
+
+.ty-start-btn:hover {
+  background-color: #4a4a4a;
+}
+
+/* Keep all styles scoped (avoid global element selectors) so no design break */
